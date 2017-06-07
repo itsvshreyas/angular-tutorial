@@ -1,5 +1,3 @@
-//IIFE!
-(function(){
 angular.module("dateTime").
 	controller("dateController", ["$scope","$http", function (scope, http) {
 		var dateTime = http.get("http://date.jsontest.com/").then(function(dateResponse){
@@ -7,4 +5,3 @@ angular.module("dateTime").
 			scope.date = dateResponse.data.date;
 		});
 	}]);
-})()
