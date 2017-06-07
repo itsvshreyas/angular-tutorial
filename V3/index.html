@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Hello time!</title>
+        <meta charset="utf-8"/>
+	    <script type="text/javascript" src="Scripts/angular.min.js"></script>
+		<script type="text/javascript" src="Scripts/app.js"></script>
+	    <script type="text/javascript" src="Scripts/dateController.js"></script>
+		<script type="text/javascript" src="Scripts/timeController.js"></script>
+	</head>
+	<!--We can ng-init the application to run, but it's hacky, and doesn't provide too much insight on how it should work. We also can display params set up in different parts of the app - here we're displaying one message on the page that comes both from the ng-init and helloWorldController scope.-->
+	<body ng-app="dateTime">
+	<div ng-controller="dateController">Today is: {{date}}</div>
+		<div ng-controller="timeController" >
+			The time is: {{time}}
+		</div>
+	</body>
+</html>
